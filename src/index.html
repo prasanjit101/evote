@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ethereum Voting Dapp</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eVote</title>
 
-    
-  </head>
-  <body>
-    <div id="head" class="text-center">
-      <h1>Ethereum Voting Dapp</h1>
-      <p> Welcome for Voting</p>
-      <p>Voting Dates: <span id="dates"></span></p>
-      <hr/>
-      <br/> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="head" class="text-center">
+    <h1>eVote</h1>
+    <div class=" d-inline">
+      <h3 class="primary">Admin Portal</h3>
+      <a href="./dashboard.html" target="_blank">Dashboard</a>
+      <a href="./admin.html" target="_blank">Admin</a>
     </div>
-    <div id="candidate" class="container"> 
-      <table class="table text-center">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Party</th>
-            <th>Total Vote</th>
-          </tr>
-        </thead>
-        <tbody id="boxCandidate"></tbody>
-      </table>
-      <hr/>
-      <br/>
+    <p> Welcome for Voting</p>
+    <p>Voting Dates: <span id="dates"></span></p>
+    <hr />
+    <br />
+  </div>
+  <div id="candidate" class="container">
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Party</th>
+          <th>Total Vote</th>
+        </tr>
+      </thead>
+      <tbody id="boxCandidate"></tbody>
+    </table>
+    <hr />
+    <br />
+  </div>
+  <div id="vote" class="container text-center">
+    <p>Please select one of the candidates and click the vote button.</p>
+    <button id="voteButton" class="btn btn-primary" onclick="App.vote()" disabled>Vote</button>
+    <div id="msg"></div>
+
+    <hr />
+
+    <div id="vote-box"></div>
+  </div>
+
+  <hr />
+  <div id="account">
+    <p id="accountAddress" class="text-center"></p>
+  </div>
+
+  <footer class="footer mt-auto py-3 bg-light" style="position: absolute;bottom:0">
+    <div class="container">
+      <div class="text-muted">CSB19057</div>
+      <div class="text-muted">PRASANJIT DUTTA</div>
     </div>
-    <div id="vote"class="container text-center">
-      <p>Please select one of the candidates and click the vote button.</p>
-      <button id="voteButton" class="btn btn-primary" onclick="App.vote()" disabled>Vote</button>
-      <div id="msg"></div>
-
-      <hr/>
-
-      <div id="vote-box"></div>
-    </div>
-
-    <hr/>    
-    <div id="account">
-          <p id="accountAddress" class="text-center"></p>
-    </div>
-
-
+  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
   <script src="app.js"></script>
-  </body>
+</body>
+
 </html>

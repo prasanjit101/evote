@@ -11,15 +11,15 @@ module.exports = {
     // Copy our app's index.html to the build folder.
     new CopyWebpackPlugin([
       { from: './src/index.html', to: "index.html" },
-      { from: './src/admin.html', to: "admin.html" }
-
+      { from: './src/admin.html', to: "admin.html" },
+      { from: './src/dashboard.html', to: "dashboard.html" },
     ])
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
       }
     ],
     loaders: [
