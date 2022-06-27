@@ -1,5 +1,5 @@
 {
-  "name": "ethereum-voting-dapp",
+  "name": "evote",
   "version": "1.0.0",
   "description": "",
   "main": "truffle.js",

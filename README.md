@@ -1,4 +1,4 @@
-#  Ethereum voting dapp
+#  eVote
 
 ## Dependencies:
 - [Nodejs 5.0+](https://nodejs.org/en/)

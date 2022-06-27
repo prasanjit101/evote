@@ -33,9 +33,10 @@ window.App = {
             var startDate = Date.parse(document.getElementById("startDate").value) / 1000;
 
             var endDate = Date.parse(document.getElementById("endDate").value) / 1000;
-
+            console.log("startDate :", startDate);
+            console.log("endDate :", endDate);
             instance.setDates(startDate, endDate).then(function (rslt) {
-              console.log("tarihler verildi");
+              console.log("Date set");
             });
 
           });
